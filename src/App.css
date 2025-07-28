@@ -1,0 +1,417 @@
+html {
+	background: url("./assets/background.png");
+	background-size: 1000px;
+	font-family: "Montserrat";
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	padding: 1rem 0;
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.75rem;
+	font-weight: bold;
+
+	transition: transform 0.125s linear;
+}
+
+nav a:hover {
+	transform: scale(1.125);
+}
+
+.cat-container {
+	position: relative;
+	max-width: 50%;
+	margin: auto;
+	pointer-events: none;
+	user-select: none;
+}
+
+.cat-container .eye {
+	position: absolute;
+	width: 1.75%;
+	height: auto;
+}
+
+.cat-container .left-eye {
+	top: 29.25%;
+	left: 44.5%;
+}
+
+.cat-container .right-eye {
+	top: 30.75%;
+	left: 53%;
+}
+
+
+
+/* gallery */
+
+#swiper-container {
+	width: 50%;
+	position: relative;
+	margin: auto;
+	margin-top: 2rem;
+}
+
+#gallery-swiper {
+	padding-bottom: 25px;
+}
+
+.custom-nav {
+	scale: 2.5;
+	transition: scale 0.025s linear;
+}
+
+.custom-nav:hover {
+	scale: 3.25;
+}
+
+.swiper-button-prev {
+	rotate: -90deg;
+}
+
+.swiper-button-next {
+	rotate: 90deg;
+}
+
+.swiper-pagination-bullet {
+	background-color: white !important;
+	opacity: 100% !important;
+	scale: 1.75;
+	margin: 0 0.5rem !important;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #411B3B !important;
+}
+
+.slide {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.slide img {
+	max-height: 500px;
+}
+
+.slide p {
+	color: white;
+	font-weight: bold;
+	font-size: 3em;
+	letter-spacing: 2.5px;
+}
+
+
+/* Nail salon */
+
+#nail-salon-container {
+	width: 1500px;
+	max-width: 75%;
+	height: 750px;
+	background-image: url("https://i.pinimg.com/1200x/7e/ed/ce/7eedcecdeca1f12c3c9cb3cc81be0281.jpg");
+	background-size: 150px;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	border-radius: 50px;
+}
+
+#nail-salon-container h1 {
+	width: fit-content;
+	background-color: #7D56A0;
+	color: white;
+	font-size: 2.5rem;
+	text-align: center;
+	letter-spacing: 2px;
+	margin: auto;
+	padding: 0.5rem 2rem;
+	border-radius: 40px;
+}
+
+#nail-salon-game-container {
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+	padding-right: 5rem;
+}
+
+#nail-salon-game-container canvas {
+	align-self: flex-end;
+	object-fit: contain;
+}
+
+#nail-salon-game-container .sidebar {
+	width: 35%;
+	height: 60%;
+	background-color: #BD95C8;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	text-align: center;
+	padding-top: 1rem;
+	border: 5px solid #815CA6;
+	border-radius: 25px;
+}
+
+#nail-salon-game-container .sidebar > * {
+	padding: 0 3rem;
+	padding-bottom: 2rem;
+	border-bottom: 5px solid #815CA6;
+}
+
+#nail-salon-game-container .sidebar > *:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+#nail-salon-game-container .sidebar .colours {
+	max-width: 250px;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(10px, 1fr)); /* Adjust size */
+	column-gap: 1.5rem;
+	row-gap: 0.75rem;
+	margin: auto;
+}
+
+#nail-salon-game-container .sidebar h2 {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+#nail-salon-game-container .sidebar .colours > span {
+	aspect-ratio: 1;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+#nail-salon-game-container .sidebar .buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	flex-grow: 1;
+}
+
+#nail-salon-game-container .sidebar .buttons button {
+	background-color: #7D5274;
+	cursor: pointer;
+	transition: all 0.125s linear;
+	color: #DEB1C7;
+	font-weight: bold;
+	font-size: 1.5rem;
+	border-radius: 20px;
+	padding: 0.25rem 1rem;
+	border: none;
+	box-shadow: -3.5px 3.5px 0px #653F5F;
+}
+
+#nail-salon-game-container .sidebar .buttons button:hover {
+	box-shadow: -7px 7px 0px #653F5F;
+	translate: 3.5px -3.5px;
+}
+
+
+/* League profile */
+#league-profile {
+	--bg-colour: #111E28;
+	--white-line-border: 2px solid rgba(255, 255, 255, 0.10);
+	max-width: fit-content;
+	background-color: var(--bg-colour);
+	color: white;
+	margin: auto;
+	padding: 1rem 2rem;
+}
+
+#league-profile .info-container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+#league-profile .header {
+	position: relative;
+	text-align: center;
+}
+
+#league-profile .header .line {
+	width: 100%;
+	position: absolute;
+	bottom: 50%;
+	border-bottom: var(--white-line-border);
+	z-index: 0;
+}
+
+#league-profile h1 {
+	display: inline-block;
+	background-color: var(--bg-colour);
+	font-family: "Cinzel", serif;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	position: relative;
+	z-index: 1;
+}
+
+#league-profile .header h1 {
+	margin: auto;
+}
+
+#league-profile .profile-pic {
+	position: relative;
+	aspect-ratio: 1;
+	background-color: #3C394B;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 5px solid #6B532C;
+	padding: 0.75rem;
+	padding-bottom: 0;
+}
+
+#league-profile .profile-pic img {
+	width: 100px;
+	position: relative;
+	bottom: -5%;
+}
+
+.fancy-border {
+	border: 3px solid #6B532C;
+	border-radius: 15px;
+}
+
+#league-profile .main-container {
+	display: flex;
+	gap: 2rem;
+	margin-top: 1rem;
+}
+
+#league-profile #recent-matches {
+	height: fit-content;
+	padding: 0.75rem 0.5rem;
+}
+
+#league-profile #recent-matches table {
+	color: black;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#league-profile #recent-matches table > tr {
+	background-color: #CCB28B;
+	border-bottom: 2px solid rgba(119, 99, 66, 0.5);
+}
+
+#league-profile #recent-matches table > tr:first-child,
+#league-profile #recent-matches table > tr:last-child {
+	background-color: #AB946E;
+}
+
+#league-profile #recent-matches table > tr > * {
+	border: none;
+}
+
+#league-profile #recent-matches table > tr > th {
+	padding: 0.25rem 0;
+}
+
+#league-profile #recent-matches table > tr > td {
+	font-weight: 500;
+	font-size: 1.25rem;
+	padding: 1rem 2rem;
+}
+
+#league-profile .brief {
+	max-width: 500px;
+	position: relative;
+	top: -75px;
+}
+
+#league-profile .brief > * {
+	padding: 0.5rem 1rem;
+}
+
+#stats {
+	margin-bottom: 1.25rem;
+}
+
+#stats .pie-chart {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: conic-gradient(
+		#BD95C8 0% 57%,
+		#84602B 57% 100%
+	);
+}
+
+#stats > div {
+	margin: 0.75rem 0;
+}
+
+#league-profile .brief > * h1 {
+	display: block;
+	font-size: 1.5rem;
+	border-bottom: var(--white-line-border);
+}
+
+#league-profile #abilities p {
+	margin: 1rem 0;
+}
+
+#league-profile #abilities p:last-child {
+	margin-bottom: 0px;
+}
+
+.victory {
+	color: green;
+}
+
+.defeat {
+	color: red;
+}
+
+#league-profile table .video {
+	width: 40px;
+	height: auto;
+	display: inline;
+	cursor: pointer;
+	margin: 0 0.25rem;
+}
+
+#league-profile table .video:hover {
+	scale: 1.125;
+}
+
+#video-player {
+	background-color: rgba(0, 0, 0, 0.75);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 99999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#video-player img {
+	height: 75%;
+	width: auto;
+}
+
+
+/* Misc */
+.flex {
+	display: flex;
+}
+.space-between {
+	justify-content: space-between;
+}

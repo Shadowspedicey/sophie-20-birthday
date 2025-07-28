@@ -1,0 +1,37 @@
+[
+	{
+		"prey": "Mouse",
+		"isVictory": true,
+		"clips": 2
+	},
+	{
+		"prey": "Mouse",
+		"isVictory": false,
+		"clips": 2
+	},
+	{
+		"prey": "Mouse",
+		"isVictory": true,
+		"clips": 4
+	},
+	{
+		"prey": "Mouse",
+		"isVictory": true,
+		"clips": 2
+	},
+	{
+		"prey": "Bird",
+		"isVictory": true,
+		"clips": 2
+	},
+	{
+		"prey": "Bird",
+		"isVictory": true,
+		"clips": 1
+	},
+	{
+		"prey": "Bird",
+		"isVictory": true,
+		"clips": 2
+	}
+]
